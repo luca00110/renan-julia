@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Dia dos Namorados ❤️</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero" class="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow reveal-fade">12 de junho</span>
+      <h1 class="hero-title reveal-up">
+        Nosso Dia<br />
+        <em>dos Namorados</em>
+        <span class="heart-accent">❤</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-1">
+        Cada momento ao seu lado é uma memória que guardo para sempre.
+      </p>
+      <button class="btn-hero reveal-up delay-2" id="btn-start">
+        <span>Começar nossa história</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALERIA DE MEMÓRIAS
+  ============================================================ -->
+  <section id="galeria" class="section galeria">
+    <div class="section-header">
+      <span class="section-label">Nossas memórias</span>
+      <h2 class="section-title reveal-up">Momentos que<br /><em>ficaram para sempre</em></h2>
+      <p class="section-desc reveal-up delay-1">Uma coleção dos nossos capítulos favoritos.</p>
+    </div>
+
+    <div class="gallery-mosaic">
+      <div class="gallery-item g-tall reveal-photo" data-index="0">
+        <img src="foto1.jpeg" alt="Memória 1" loading="lazy" />
+        <div class="gallery-overlay">
+          <span>♥</span>
+        </div>
+      </div>
+      <div class="gallery-item g-wide reveal-photo" data-index="1">
+        <img src="foto2.jpeg" alt="Memória 2" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item reveal-photo" data-index="2">
+        <img src="foto3.jpeg" alt="Memória 3" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item reveal-photo" data-index="3">
+        <img src="foto4.jpeg" alt="Memória 4" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item g-tall reveal-photo" data-index="4">
+        <img src="foto5.jpeg" alt="Memória 5" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item reveal-photo" data-index="5">
+        <img src="foto6.jpeg" alt="Memória 6" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item g-wide reveal-photo" data-index="6">
+        <img src="foto7.jpeg" alt="Memória 7" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item reveal-photo" data-index="7">
+        <img src="foto8.jpeg" alt="Memória 8" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item reveal-photo" data-index="8">
+        <img src="foto9.jpeg" alt="Memória 9" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+      <div class="gallery-item g-wide reveal-photo" data-index="9">
+        <img src="foto10.jpeg" alt="Memória 10" loading="lazy" />
+        <div class="gallery-overlay"><span>♥</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Foto -->
+  <div id="photo-modal" class="photo-modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+    <button class="modal-nav modal-prev" id="modal-prev" aria-label="Anterior">&#8592;</button>
+    <div class="modal-img-wrap">
+      <img id="modal-img" src="" alt="Foto ampliada" />
+    </div>
+    <button class="modal-nav modal-next" id="modal-next" aria-label="Próxima">&#8594;</button>
+  </div>
+
+  <!-- ============================================================
+       LINHA DO TEMPO
+  ============================================================ -->
+  <section id="timeline" class="section timeline-section">
+    <div class="section-header">
+      <span class="section-label">Nossa jornada</span>
+      <h2 class="section-title reveal-up">Capítulos da<br /><em>nossa história</em></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item tl-left reveal-tl">
+        <div class="tl-card">
+          <div class="tl-icon">✨</div>
+          <h3>Nosso primeiro momento</h3>
+          <p>Quando os nossos olhos se encontraram pela primeira vez e algo mudou para sempre. O mundo parou por um instante só para nós dois.</p>
+        </div>
+        <div class="tl-dot"></div>
+      </div>
+
+      <div class="timeline-item tl-right reveal-tl">
+        <div class="tl-card">
+          <div class="tl-icon">❤️</div>
+          <h3>Nosso crescimento</h3>
+          <p>Cada conversa, cada riso, cada silêncio compartilhado. Fomos nos conhecendo e nos tornando parte um do outro sem perceber.</p>
+        </div>
+        <div class="tl-dot"></div>
+      </div>
+
+      <div class="timeline-item tl-left reveal-tl">
+        <div class="tl-card">
+          <div class="tl-icon">🌙</div>
+          <h3>Momentos especiais</h3>
+          <p>As noites que não queríamos que terminassem, os abraços que diziam mais do que palavras jamais conseguiriam. Cada detalhe gravado no coração.</p>
+        </div>
+        <div class="tl-dot"></div>
+      </div>
+
+      <div class="timeline-item tl-right reveal-tl">
+        <div class="tl-card">
+          <div class="tl-icon">∞</div>
+          <h3>E tudo que ainda virá</h3>
+          <p>Ainda temos tantos capítulos para escrever juntos. Tantos lugares para descobrir, tantas memórias para criar. E eu quero cada uma delas ao seu lado.</p>
+        </div>
+        <div class="tl-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CARTA DIGITAL
+  ============================================================ -->
+  <section id="carta" class="section carta-section">
+    <div class="section-header">
+      <span class="section-label">Para você</span>
+      <h2 class="section-title reveal-up">Uma carta<br /><em>do coração</em></h2>
+    </div>
+
+    <div class="envelope-wrap reveal-up delay-1">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-icon">✉</div>
+          <p class="envelope-hint">Clique para abrir</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carta aberta -->
+    <div id="carta-modal" class="carta-modal" role="dialog" aria-modal="true">
+      <div class="carta-paper">
+        <button class="carta-close" id="carta-close" aria-label="Fechar carta">✕</button>
+        <div class="carta-content">
+          <p class="carta-greeting">Amor,</p>
+          <p>
+            Existem momentos na vida que a gente não sabe nomear enquanto estão acontecendo. São leves demais, intensos demais, perfeitos demais. Só depois — com o tempo — é que a gente olha para trás e entende o quanto aqueles instantes valeram.
+          </p>
+          <p>
+            Você é um desses momentos. Só que você não acabou — você continua acontecendo todo dia, de formas diferentes, sempre mais bonitas.
+          </p>
+          <p>
+            Obrigado por cada riso, por cada detalhe que você escolheu compartilhar comigo. Por me fazer sentir que o mundo é um lugar melhor só porque você está nele.
+          </p>
+          <p>
+            Neste dia, e em todos os outros, quero que você saiba: eu te escolho. Com toda a força que eu tenho, te escolho.
+          </p>
+          <p class="carta-sign">Com todo o meu amor, ❤</p>
+        </div>
+        <div class="carta-decoration">
+          <span>✿</span><span>❤</span><span>✿</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL SECTION
+  ============================================================ -->
+  <section id="final" class="section final-section">
+    <canvas id="hearts-canvas"></canvas>
+    <div class="final-glow"></div>
+
+    <div class="final-content">
+      <div class="final-hearts-deco">
+        <span class="dh dh1">❤</span>
+        <span class="dh dh2">♡</span>
+        <span class="dh dh3">❤</span>
+      </div>
+      <span class="section-label reveal-fade">12 de junho · Para sempre</span>
+      <h2 class="final-title reveal-up">
+        Obrigado por viver<br />
+        <em>tudo isso comigo</em>
+        <span class="final-heart">❤</span>
+      </h2>
+      <p class="final-sub reveal-up delay-1">
+        Cada foto, cada abraço, cada memória — tudo foi real.<br />
+        E eu não trocaria nada.
+      </p>
+      <button class="btn-final reveal-up delay-2" id="btn-top">
+        <span>Voltar ao início</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOTÃO DE MÚSICA FLUTUANTE
+  ============================================================ -->
+  <div class="music-player" id="music-player">
+    <div class="music-label" id="music-label">♪ Tocando agora</div>
+    <button class="music-btn" id="music-btn" aria-label="Tocar música">
+      <div class="music-disc" id="music-disc">
+        <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+          <path d="M6 19h4V5H6zm8-14v14h4V5z"/>
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+  <button class="back-top" id="back-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="index.js"></script>
+</body>
+</html>
