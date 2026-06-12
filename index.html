@@ -226,6 +226,17 @@
         Cada foto, cada abraço, cada memória — tudo foi real.<br />
         E eu não trocaria nada.
       </p>
+      <button class="btn-final reveal-up delay-2 gift-trigger" id="gift-trigger" type="button">
+        <span>Abra seu presente</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M20 12v9H4v-9"/>
+          <path d="M2 7h20v5H2z"/>
+          <path d="M12 22V7"/>
+          <path d="M12 7H7.5a2.5 2.5 0 1 1 2.5-2.5C10 6 12 7 12 7z"/>
+          <path d="M12 7h4.5A2.5 2.5 0 1 0 14 4.5C14 6 12 7 12 7z"/>
+        </svg>
+      </button>
+
       <button class="btn-final reveal-up delay-2" id="btn-top">
         <span>Voltar ao início</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -234,6 +245,30 @@
       </button>
     </div>
   </section>
+
+  <!-- ============================================================
+       VALE-PRESENTE RENNER
+  ============================================================ -->
+  <div id="gift-modal" class="carta-modal" role="dialog" aria-modal="true">
+    <div class="carta-paper gift-voucher">
+      <button class="carta-close" id="gift-close" aria-label="Fechar presente">✕</button>
+
+      <div class="carta-content gift-content">
+        <p class="carta-greeting">Surpresa, meu amor ❤</p>
+        <p class="gift-label">Vale-presente</p>
+        <h3 class="gift-value">R$ 300,00</h3>
+        <p class="gift-store">para usar na Renner</p>
+        <p>
+          Um carinho para você escolher algo que goste e lembrar desse Dia dos Namorados com ainda mais amor.
+        </p>
+        <p class="carta-sign">Com todo o meu amor, ❤</p>
+      </div>
+
+      <div class="carta-decoration">
+        <span>✿</span><span>❤</span><span>✿</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        BOTÃO DE MÚSICA FLUTUANTE

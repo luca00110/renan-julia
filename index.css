@@ -902,3 +902,53 @@ img {
     transition-duration: 0.001ms !important;
   }
 }
+/* ============================================================
+   VALE-PRESENTE RENNER
+============================================================ */
+
+.gift-trigger {
+  margin-right: 14px;
+  border-color: rgba(212,132,158,0.55);
+  background: rgba(212,132,158,0.12);
+}
+
+.gift-voucher {
+  max-width: 540px;
+}
+
+.gift-content {
+  text-align: center;
+}
+
+.gift-label {
+  font-family: var(--ff-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #8a3a3a;
+  margin-bottom: 8px !important;
+}
+
+.gift-value {
+  font-family: var(--ff-serif);
+  font-size: clamp(3.2rem, 10vw, 5.2rem);
+  line-height: 1;
+  color: #8a3a3a;
+  margin: 8px 0 10px;
+}
+
+.gift-store {
+  font-family: var(--ff-serif);
+  font-size: 1.35rem !important;
+  font-style: italic;
+  color: #2a1a10 !important;
+  margin-bottom: 22px !important;
+}
+
+@media (max-width: 480px) {
+  .gift-trigger {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}

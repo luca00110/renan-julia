@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGallery();
   initTimeline();
   initEnvelope();
+  initGiftCard();
   initMusic();
   initScrollButtons();
   initBackTop();
@@ -497,4 +498,38 @@ function throttle(fn, delay) {
       fn.apply(this, args);
     }
   };
+}
+// ============================================================
+// VALE-PRESENTE RENNER
+// ============================================================
+
+function initGiftCard() {
+  const giftTrigger = $('#gift-trigger');
+  const giftModal = $('#gift-modal');
+  const giftClose = $('#gift-close');
+
+  if (!giftTrigger || !giftModal || !giftClose) return;
+
+  function openGift() {
+    giftModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeGift() {
+    giftModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  giftTrigger.addEventListener('click', openGift);
+  giftClose.addEventListener('click', closeGift);
+
+  giftModal.addEventListener('click', (e) => {
+    if (e.target === giftModal) closeGift();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (giftModal.classList.contains('open') && e.key === 'Escape') {
+      closeGift();
+    }
+  });
 }
